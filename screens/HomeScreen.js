@@ -17,10 +17,12 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+        contentContainerStyle={styles.contentContainer}
+      >
         <View style={styles.welcomeContainer}>
           <Image
             source={
+              // eslint-disable-next-line no-undef
               __DEV__
                 ? require('../assets/images/robot-dev.png')
                 : require('../assets/images/robot-prod.png')
