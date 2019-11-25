@@ -13,7 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import AppNavigator from './navigation/AppNavigator';
 import firebase from './config/firebase.config';
-import { signup } from './database/user';
+import { signupWithEmail } from './database/user';
 
 function checkLoggedUser() {
   firebase.auth().onAuthStateChanged((user) => {
@@ -42,7 +42,7 @@ export default function App(props) {
     <View style={styles.container}>
       {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
       <AppNavigator />
-      <Button onPress={signup} title="Signup" />
+      <Button onPress={signupWithEmail} title="Signup" />
     </View>
   );
 }
