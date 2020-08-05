@@ -1,5 +1,5 @@
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import * as WebBrowser from "expo-web-browser";
+import React from "react";
 import {
   Image,
   Platform,
@@ -8,9 +8,9 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from 'react-native';
+} from "react-native";
 
-import { MonoText } from '../components/StyledText';
+import { MonoText } from "../components/StyledText";
 
 export default function HomeScreen() {
   return (
@@ -24,8 +24,8 @@ export default function HomeScreen() {
             source={
               // eslint-disable-next-line no-undef
               __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
+                ? require("../assets/images/robot-dev.png")
+                : require("../assets/images/robot-prod.png")
             }
             style={styles.welcomeImage}
           />
@@ -37,12 +37,13 @@ export default function HomeScreen() {
           <Text style={styles.getStartedText}>Get started by opening</Text>
 
           <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
+          >
             <MonoText>screens/HomeScreen.js</MonoText>
           </View>
 
           <Text style={styles.getStartedText}>
-            Change this text and your app will automatically reload.
+            Change this text and your app will automatically reload. uuh
           </Text>
         </View>
 
@@ -61,7 +62,8 @@ export default function HomeScreen() {
         </Text>
 
         <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
+          style={[styles.codeHighlightContainer, styles.navigationFilename]}
+        >
           <MonoText style={styles.codeHighlightText}>
             navigation/MainTabNavigator.js
           </MonoText>
@@ -100,72 +102,72 @@ function DevelopmentModeNotice() {
 
 function handleLearnMorePress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/development-mode/'
+    "https://docs.expo.io/versions/latest/workflow/development-mode/"
   );
 }
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
+    "https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes"
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   developmentModeText: {
     marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
+    color: "rgba(0,0,0,0.4)",
     fontSize: 14,
     lineHeight: 19,
-    textAlign: 'center',
+    textAlign: "center",
   },
   contentContainer: {
     paddingTop: 30,
   },
   welcomeContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 10,
     marginBottom: 20,
   },
   welcomeImage: {
     width: 100,
     height: 80,
-    resizeMode: 'contain',
+    resizeMode: "contain",
     marginTop: 3,
     marginLeft: -10,
   },
   getStartedContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginHorizontal: 50,
   },
   homeScreenFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
+    color: "rgba(96,100,109, 0.8)",
   },
   codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
+    backgroundColor: "rgba(0,0,0,0.05)",
     borderRadius: 3,
     paddingHorizontal: 4,
   },
   getStartedText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: "rgba(96,100,109, 1)",
     lineHeight: 24,
-    textAlign: 'center',
+    textAlign: "center",
   },
   tabBarInfoContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
     ...Platform.select({
       ios: {
-        shadowColor: 'black',
+        shadowColor: "black",
         shadowOffset: { width: 0, height: -3 },
         shadowOpacity: 0.1,
         shadowRadius: 3,
@@ -174,27 +176,27 @@ const styles = StyleSheet.create({
         elevation: 20,
       },
     }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    alignItems: "center",
+    backgroundColor: "#fbfbfb",
     paddingVertical: 20,
   },
   tabBarInfoText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
+    color: "rgba(96,100,109, 1)",
+    textAlign: "center",
   },
   navigationFilename: {
     marginTop: 5,
   },
   helpContainer: {
     marginTop: 15,
-    alignItems: 'center',
+    alignItems: "center",
   },
   helpLink: {
     paddingVertical: 15,
   },
   helpLinkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: "#2e78b7",
   },
 });
